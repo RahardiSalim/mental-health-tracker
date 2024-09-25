@@ -25,11 +25,11 @@ SECRET_KEY = 'django-insecure-!o6_@*0@7s8@=tip@izizai@gz_he3yeg#f6y-h=%h+o7eodp@
 
 # SECURITY WARNING: don't run with debug turned on in production!
 PRODUCTION = os.getenv("PRODUCTION", False)
-DEBUG = not PRODUCTION
+DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1","rahardi-salim-mentalhealthtracker2.pbp.cs.ui.ac.id"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1","rahardi-salim-mentalhealthtracker.pbp.cs.ui.ac.id"]
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://rahardi-salim-mentalhealthtracker2.pbp.cs.ui.ac.id", "https://rahardi-salim-mentalhealthtracker2.pbp.cs.ui.ac.id"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://rahardi-salim-mentalhealthtracker.pbp.cs.ui.ac.id", "https://rahardi-salim-mentalhealthtracker.pbp.cs.ui.ac.id"]
 # Application definition
 
 INSTALLED_APPS = [
