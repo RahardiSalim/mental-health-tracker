@@ -21,15 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!o6_@*0@7s8@=tip@izizai@gz_he3yeg#f6y-h=%h+o7eodp@'
+SECRET_KEY = 'django-insecure-ee2dt@)qo#7h8v^!l4#)@-gcu=mm*&7qdea29@bf@05_izl_&8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 PRODUCTION = os.getenv("PRODUCTION", False)
-DEBUG = True
+DEBUG = not PRODUCTION
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1","rahardi-salim-mentalhealthtracker.pbp.cs.ui.ac.id"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "christian-yudistira-mentalhealthtrackers.pbp.cs.ui.ac.id"]
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://rahardi-salim-mentalhealthtracker.pbp.cs.ui.ac.id", "https://rahardi-salim-mentalhealthtracker.pbp.cs.ui.ac.id"]
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,12 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
+    'main'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -117,8 +119,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
-
+# Dokumentasi: https://docs.djangoproject.com/en/5.1/howto/static-files/
 STATIC_URL = '/static/'
 if DEBUG:
     STATICFILES_DIRS = [
@@ -131,3 +132,4 @@ else:
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://christian-yudistira-mentalhealthtrackers.pbp.cs.ui.ac.id", "https://christian-yudistira-mentalhealthtrackers.pbp.cs.ui.ac.id"]
